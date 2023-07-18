@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="320.0" styleClass="menu" stylesheets="@history.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bank.HistoryController">
+   <children>
+      <Label layoutX="15.0" layoutY="22.0" styleClass="text" text="Рахунок:" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="153.0" layoutY="22.0" styleClass="text" text="Баланс:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="idHistory" layoutX="90.0" layoutY="22.0" prefHeight="27.0" prefWidth="54.0" styleClass="text" stylesheets="@history.css">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="balanceHistory" layoutX="218.0" layoutY="22.0" prefHeight="27.0" prefWidth="90.0" styleClass="text" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutY="71.0" prefHeight="530.0" prefWidth="320.0" stylesheets="@history.css">
+        <columns>
+          <TableColumn fx:id="idColm" prefWidth="38.0" text="ID " />
+          <TableColumn fx:id="sumColm" prefWidth="79.0" text="Операція" />
+            <TableColumn fx:id="dateColm" prefWidth="72.0" text="Дата" />
+            <TableColumn fx:id="purposeColm" prefWidth="65.0" text="Назва" />
+            <TableColumn fx:id="balanceColm" prefWidth="65.0" text="Баланс" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

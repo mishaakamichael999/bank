@@ -1,0 +1,59 @@
+.menu{
+    -fx-background-color: linear-gradient(to bottom right, #4768d3, #212c5d);
+}
+
+.button {
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(to bottom right, #212c5d, #4768d3);
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+    -fx-text-fill: #fcfcfc;
+    -fx-cursor: hand;
+    -fx-font-size: 10px;
+    -fx-padding: 5px 5px;
+    -fx-min-height: 20px;
+    -fx-outline: none;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-user-select: none;
+    -fx-touch-action: manipulation;
+    -fx-vertical-align: middle;
+    -fx-word-break: keep-all;
+    -fx-background-radius: 80px;
+    -fx-font-family: 'Comic Sans MS', cursive;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4768d3, #212c5d);}
+
+.table-view{
+    -fx-background-color: linear-gradient(to bottom right, rgba(223, 250, 64, 0), rgba(252, 146, 60, 0));
+    -fx-background-radius: 80px;
+}
+
+.table-column{
+    -fx-background-color: rgba(17, 81, 157, 0.64);
+}
+
+.text{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 16px;
+}
+
+input{
+    -fx-font-size: 24px;
+    -fx-prompt-text-size: 24px;
+}
+
+.textLabel{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 18px;
+}
+
+.bigTextLabel{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 24px;
+}

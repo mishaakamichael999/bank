@@ -1,0 +1,27 @@
+.menu{
+    -fx-background-color: linear-gradient(to bottom right, #4768d3, #212c5d);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #212c5d, #4768d3);
+}
+
+.table-view{
+    -fx-background-color: linear-gradient(to bottom right, rgba(223, 250, 64, 0), rgba(252, 146, 60, 0));
+    -fx-background-radius: 80px;
+}
+
+.table-column{
+    -fx-background-color: rgba(17, 81, 157, 0.64);
+}
+
+.text{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 16px;
+}
+
+input{
+    -fx-font-size: 24px;
+    -fx-prompt-text-size: 24px;
+}

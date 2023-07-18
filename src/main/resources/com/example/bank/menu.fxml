@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="menu" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bank.MenuController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="818.0" styleClass="table-view" stylesheets="@menu.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Клієнти">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="738.0" styleClass="menu" stylesheets="@menu.css">
+                     <children>
+                        <Button layoutX="700.0" layoutY="330.0" mnemonicParsing="false" onAction="#history" prefHeight="45.0" prefWidth="100.0" stylesheets="@menu.css" text="Історія" />
+                        <Separator layoutX="656.0" layoutY="43.0" orientation="VERTICAL" prefHeight="402.0" prefWidth="16.0" />
+                        <TableView fx:id="table" prefHeight="542.0" prefWidth="639.0">
+                          <columns>
+                            <TableColumn fx:id="idColm" prefWidth="78.0" text="Рахунок" />
+                            <TableColumn fx:id="nameColm" prefWidth="94.0" text="Ім'я" />
+                              <TableColumn fx:id="secondnameColm" prefWidth="101.0" text="Прізвище" />
+                              <TableColumn fx:id="addressColm" prefWidth="101.0" text="Адреса" />
+                              <TableColumn fx:id="indexColm" prefWidth="66.0" text="Індекс" />
+                              <TableColumn fx:id="dateColm" prefWidth="93.0" text="Реєстрація" />
+                              <TableColumn fx:id="balanceColm" prefWidth="104.0" text="Баланс " />
+                          </columns>
+                           <styleClass>
+                              <String fx:value="menu" />
+                              <String fx:value="text" />
+                           </styleClass>
+                        </TableView>
+                        <ButtonBar layoutX="639.0" layoutY="104.0" prefHeight="40.0" prefWidth="200.0" />
+                        <Button layoutX="700.0" layoutY="400.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="Excel" />
+                        <Button layoutX="700.0" layoutY="260.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="45.0" prefWidth="100.0" stylesheets="@menu.css" text="Видалити" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Новий клієнт">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="nameField" layoutX="60.0" layoutY="90.0" prefHeight="50.0" prefWidth="300.0" promptText="Ім'я">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <TextField fx:id="secondnameField" layoutX="60.0" layoutY="160.0" prefHeight="50.0" prefWidth="300.0" promptText="Прізвище">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <TextField fx:id="addressField" layoutX="60.0" layoutY="230.0" prefHeight="50.0" prefWidth="300.0" promptText="Адреса">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <TextField fx:id="indexField" layoutX="60.0" layoutY="300.0" prefHeight="50.0" prefWidth="300.0" promptText="Поштовий індекс">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <TextField fx:id="startBalance" layoutX="460.0" layoutY="160.0" prefHeight="50.0" prefWidth="150.0" promptText="Баланс">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <Label layoutX="319.0" layoutY="37.0" prefHeight="53.0" prefWidth="250.0" styleClass="bigTextLabel" stylesheets="@menu.css" text="Новий клієнт">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="460.0" layoutY="127.0" styleClass="textLabel" stylesheets="@menu.css" text="Стартовий баланс(необов'язково)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="700.0" layoutY="400.0" mnemonicParsing="false" onAction="#addClient" prefHeight="45.0" prefWidth="100.0" text="Додати" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Транзакція">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="800.0">
+                     <children>
+                        <Label layoutX="319.0" layoutY="37.0" styleClass="bigTextLabel" stylesheets="@menu.css" text="Транзакція">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="numClient" layoutX="60.0" layoutY="90.0" prefHeight="50.0" prefWidth="300.0" promptText="Номер клієнта">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <TextField fx:id="sumField" layoutX="60.0" layoutY="160.0" prefHeight="50.0" prefWidth="300.0" promptText="Введіть суму зі знаком + або -">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <Label layoutX="139.0" layoutY="170.0" />
+                        <Button layoutX="700.0" layoutY="400.0" mnemonicParsing="false" onAction="#transaction" prefHeight="45.0" prefWidth="100.0" text="Виконати" />
+                        <TextField fx:id="purposeField" layoutX="60.0" layoutY="230.0" prefHeight="50.0" prefWidth="300.0" promptText="Назва транзакції">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="logout" layoutX="832.0" layoutY="540.0" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="50.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="SIGN_OUT" size="3em" />
+         </graphic>
+      </Button>
+      <Label layoutX="659.0" layoutY="235.0" prefHeight="73.0" prefWidth="400.0" rotate="90.0" styleClass="text" text="BANK NAZAROV">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

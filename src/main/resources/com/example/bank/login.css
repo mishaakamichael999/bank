@@ -1,0 +1,43 @@
+
+.layout{
+    -fx-background-color: linear-gradient(to bottom right, #4768d3, #212c5d);
+}
+
+
+.buttonLogin {
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(to bottom right, #212c5d, #4768d3);
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+    -fx-text-fill: #fcfcfc;
+    -fx-cursor: hand;
+    -fx-font-family: "Eina01", sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+    -fx-padding: 19px 26px;
+    -fx-min-height: 64px;
+    -fx-outline: none;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-user-select: none;
+    -fx-touch-action: manipulation;
+    -fx-vertical-align: middle;
+    -fx-word-break: keep-all;
+    -fx-background-radius: 80px;
+}
+
+.buttonLogin:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4768d3, #212c5d);
+}
+
+.textLabel{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 22px;
+}
+
+.mainTextLabel{
+    -fx-font-family: 'Comic Sans MS', cursive;
+    -fx-text-fill: #fcfcfc;
+    -fx-font-size: 24px;
+}
